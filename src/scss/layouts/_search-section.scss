@@ -1,0 +1,27 @@
+@use '../utils/breakpoints';
+
+.search-section {
+    margin: 1rem 0;
+}
+
+.searchbox {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    > .country-form {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        > .search {
+            flex: 1;
+        }
+    }
+
+    @include breakpoints.media-breakpoint-up(500px){
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

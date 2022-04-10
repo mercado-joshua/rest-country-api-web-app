@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where in the World?</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/main.css">
+    <meta name="theme-color" content="#fafafa">
+</head>
+<body>
+    <div class="header-section">
+        <div class="max-wrapper">
+            <header class="headerbox">
+                <h1 class="title">Where in the World?</h1>
+
+                <button class="cta-btn" data-js-cta-btn><i class="far fa-moon"></i> Dark Mode</button>
+            </header>
+        </div>
+    </div>
+    <!-- .header-section ends -->
+
+    <div class="search-section">
+        <div class="max-wrapper">
+            <div class="searchbox">
+                <form action="" class="country-form">
+                    <i class="fas fa-search"></i>
+                    <input 
+                        class="search"
+                        type="search" 
+                        name="search"
+                        placeholder="Search for a country..."
+                        data-js-search-country
+                    />
+                </form>
+    
+                <form action="" class="region-form">
+                    <select 
+                        class="region" 
+                        name="region"
+                        data-js-search-region
+                    >
+                        <option value="africa">Africa</option>
+                        <option value="america">America</option>
+                        <option value="asia">Asia</option>
+                        <option value="europe">Europe</option>
+                        <option value="oceania">Oceania</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- .search-section ends -->
+
+    <div class="max-wrapper">
+        <div class="result-section" data-js-result-section>
+        </div>
+        <!-- .results-section ends -->
+    </div>
+
+    <template data-js-country-template>
+        <section class="country-card">
+            <div class="imagebox">
+                <img class="image" src="" alt="" class="image" data-js-image>
+            </div>
+
+            <div class="contentbox">
+                <h2 class="title" data-js-title></h2>
+
+                <div class="infobox">
+                    <p class="description">
+                        <span class="highlight">Population:</span> <span data-js-population></span>
+                    </p>
+
+                    <p class="description">
+                        <span class="highlight">Region:</span> <span data-js-region></span>
+                    </p>
+
+                    <p class="description">
+                        <span class="highlight">Capital:</span> <span data-js-capital></span>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/polyfill.js"></script>
+
+    <script src="js/behaviors/color-mode.js"></script>
+    <script src="js/behaviors/color-mode-btn.js"></script>
+    <script src="js/behaviors/fetch-data.js"></script>
+</body>
+</html>

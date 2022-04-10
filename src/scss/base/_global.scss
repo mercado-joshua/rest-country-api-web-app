@@ -1,0 +1,68 @@
+@use "../utils/keyframes";
+@use "../utils/breakpoints";
+
+:root {
+    --background-color: #fafafa;
+    --text-color: #000;
+}
+
+*:where(::before, ::after) {
+    box-sizing: border-box;
+}
+
+ul, ol, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var( --background-color );
+    color: var( --text-color );
+}
+
+:where(ul, ol) > li {
+    list-style: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+[class*="-btn"] {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    appearance: none;
+}
+
+[data-theme="dark"] {
+    --background-color: #3F3F3F;
+    --text-color: #777;
+}
+
+.image {
+    display: block;
+    max-width: 100%;
+    border-style: none;
+    height: auto;
+}
+
+.max-wrapper {
+    max-width: 992px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.-hide {
+    display: none;
+}
